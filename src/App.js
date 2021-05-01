@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import "./style.css";
+import "./App.css";
 import { NavBar } from "./components/NavBar";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
@@ -20,5 +20,3 @@ export default function App() {
   );
 }
 
-
-export default App;
