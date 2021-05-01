@@ -1,18 +1,41 @@
-import React from 'react';
-import CartWidget from '../CartWidget/CartWidget';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const NavBar = () =>{
-    return(
-        <div>
-            <h1>Titulo</h1>
-            <ul>
-                <li><p>Parte1</p></li>
-                <li><p>Parte2</p></li>
-                <li><p>Parte3</p></li>
-            
-            </ul>
-            <CartWidget/>
+export const NavBar = ({categories}) => {
+  return (
+    <>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <Link class="navbar-brand" to="/">
+          Pre-Entrega
+        </Link>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon" />
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <Link class="nav-link" to="/">
+                Home
+                <span class="sr-only">(current)</span>
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/cart">
+                Carrito
+              </Link>
+            </li>
+          </ul>
         </div>
-    )
-}
-export default NavBar
+      </nav>
+    </>
+  );
+};
