@@ -41,13 +41,12 @@ export default function Footer(props){
                         <ul id="redes" className="list-group-horizontal justify-content-left" aria-label="Redes">
                             <div className="row p-0">
                                 <div className="col-6">                     
-                                    <LiRedSocial red = "facebook" enlace = "lacocina" />
-                                    <LiRedSocial red = "twitter"  enlace = "lacocina" />
+                                    <LiRedSocial red = "facebook" enlace = "tempusfoods" />
                                 </div>
                                 
                                 <div className="col-6">                     
-                                    <LiRedSocial red = "instagram" enlace = "lacocina" />
-                                    <LiRedSocial red = "linkdin"   enlace = "lacocina" />
+                                    <LiRedSocial red = "instagram" enlace = "tempusfoods" />
+                                    <LiRedSocial red = "linkdin"   enlace = "tempusfoods" />
                                 </div>
                             </div>
                         </ul>
