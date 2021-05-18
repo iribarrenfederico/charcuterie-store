@@ -5,22 +5,18 @@ import 'firebase/firestore'
 import {ListaProductos} from './components/values/values'
 
 
-const configFirebase = {
-  apiKey: "AIzaSyB01-3puILPI-r0yT9zSGOGdkw-ULRtVDw",
-  authDomain: "la-cocina-de-la-pipi.firebaseapp.com",
-  databaseURL: "https://la-cocina-de-la-pipi-default-rtdb.firebaseio.com",
-  projectId: "la-cocina-de-la-pipi",
-  storageBucket: "la-cocina-de-la-pipi.appspot.com",
-  messagingSenderId: "321255239429",
-  appId: "1:321255239429:web:46a9952644af1dc393d16c",
-  measurementId: "G-QDBG6YWM8F"
-}
-
-
-const app = firebase.initializeApp(configFirebase)
-
-
-export const db = firebase.firestore();
+var firebaseConfig = {
+  apiKey: "AIzaSyB0DNS_euYJaM10akcbmF3wfE_Sfiazq3s",
+  authDomain: "templefoods-5b990.firebaseapp.com",
+  projectId: "templefoods-5b990",
+  storageBucket: "templefoods-5b990.appspot.com",
+  messagingSenderId: "568526704107",
+  appId: "1:568526704107:web:afc0a01f39b6d1bf241dae",
+  measurementId: "G-ZME2F1M0CD"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 
 
