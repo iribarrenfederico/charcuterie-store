@@ -9,14 +9,16 @@ export default function Productos({listaProductos}){
     <div className="row" id="lista_productos"> 
       {listaProductos.map(
         (item,index) =>
-          <ProductCard  
-            key={index} 
-            nombre={May(item.nombre)} 
-            texto={item.texto} 
-            img={item.img} 
-            stock={item.stock}
-            botonera = <InputSpiner {...item}/>
-            detalle = {<Link to={"../productos/" + item.familia + "/" + item.codigo }>Ver detalle</Link>}
+          <ProductCard ({ nombre, texto, img, stock, botonera, detalle }:{
+            key: {index}; 
+            nombre: {May(item.nombre)} ;
+            texto: {item.texto}; 
+            img: {item.img}; 
+            stock: {item.stock};
+            botonera: <InputSpiner {...item}/>;
+            detalle: {<Link to={"../productos/" + item.familia + "/" + item.codigo }>Ver detalle</Link>};
+          })
+          
           />
         )
       }

@@ -1,6 +1,6 @@
 const productosHtml = `<div class="row justify-content-center py-3 mw-100">  
     <div class="col-12 pb-4">
-        <h1>No nos guardamos ning&uacute;n secreto, lo hacemos con amor.</h1>
+        <h1>Our Philosophy is a simple one.</h1>
     </div>
     <div class="col-10">
         <div class="container">
@@ -10,8 +10,8 @@ const productosHtml = `<div class="row justify-content-center py-3 mw-100">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <section class="pt-1 mt-3 mx-3">
-                        <p class="pb-2">Todas nuestras milanesas est&aacute;n rebozadas con rebozador Preferido y Avena natural, condimentadas con ajo y perejil, no tienen sal y tienen mucho amor.</p>
-                        <p>Todas nuestras hamburguesas son preparadas y congeladas en el d&iacute;a para asegurar su calidad.</p>
+                        <p class="pb-2">At Tempus we only use ex-breeding sows and ex-dairy beef in our charcuterie.</p>
+                        <p>This ethos is also part of out commitment to utilising the food-chain correctly.</p>
                     </section>
                 </div>
             </div>
