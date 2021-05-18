@@ -36,7 +36,7 @@ return(
         {...ListadoProductos[0]}
         botonera = <InputSpiner {...ListadoProductos[0]} />
     />
-      :
+      
     <Loading size="8" space="5"/>
  )  
 }
