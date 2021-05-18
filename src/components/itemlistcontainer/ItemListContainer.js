@@ -4,7 +4,7 @@ import {useParams} from 'react-router-dom'
 import Productos from './ItemList'
 import {Loading} from '../../helpers/helpers'
 import  {useCartContext} from '../../context/cartContext'
-import {db} from '../../firebase'
+import db from '../../firebase/index'
 
 import './style.css'
 

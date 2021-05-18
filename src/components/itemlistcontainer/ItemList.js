@@ -19,7 +19,7 @@ export default function Productos({listaProductos}){
             detalle: {<Link to={"../productos/" + item.familia + "/" + item.codigo }>Ver detalle</Link>};
           })
           
-          />
+          /{'>'}
         )
       }
     </div>

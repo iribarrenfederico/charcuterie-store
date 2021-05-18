@@ -46,3 +46,5 @@ db.collection("items").get().then((querySnapshot) => {
         console.log("nada", doc.data());
     });
 });
+
+export default db
