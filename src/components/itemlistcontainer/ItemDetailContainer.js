@@ -21,7 +21,7 @@ export default function ItemDetailContainer({listado}) {
       const datos = new Promise((resolve,reject) => {
         setTimeout(()=>{
           resolve(listado())
-        },500) /*aca deberia ir 2000 pero no queria seguir esperando 2 segundos cada vez que entro en la pagina*/
+        },500) 
       })
 
       datos.then((res)=>{

@@ -28,7 +28,7 @@ const barra = (listado_de_enlaces) => {
 
 const contenido_NavBar = (props) =>
     props.enlaces.map( (item,index) => {
-    //Si el item del array tiene mas de 2 elementos, compone un drop down para ese elemento.
+ 
     return ( 
       <React.Fragment>
         {!item[2] ?
