@@ -29,7 +29,7 @@ return (
     <div className="App">
 
       <Cabecera
-                titulo = 'La charcuterie' 
+                titulo = 'Tempus Charcuterie' 
                 logo = {process.env.PUBLIC_URL + '/images/logo-transparente.png'}
                 enlaces={enlacesNav}
       />
@@ -81,11 +81,11 @@ return (
       </main>
 
       <Footer
-        titulo = 'La charcuterie'
+        titulo = 'Tempus Charcuterie'
         logo = {process.env.PUBLIC_URL + '/images/logo-transparente.png'}
         enlaces={enlacesNav}
-        telefono="012345543210"
-        correo="lacharcuterie@aol.com"
+        telefono="0203 778 0630"
+        correo="info@tempusfoods.com"
       />
 
     </div>
