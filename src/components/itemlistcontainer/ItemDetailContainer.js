@@ -21,7 +21,7 @@ export default function ItemDetailContainer({listado}) {
       const datos = new Promise((resolve,reject) => {
         setTimeout(()=>{
           resolve(listado())
-        },500) 
+        },2000) 
       })
 
       datos.then((res)=>{
@@ -32,7 +32,7 @@ export default function ItemDetailContainer({listado}) {
 
 return(
   ListadoProductos.length > 0 ? 
-    <ItemDetail 
+    <ItemDetail
         {...ListadoProductos[0]}
         botonera = <InputSpiner {...ListadoProductos[0]} />
     />
