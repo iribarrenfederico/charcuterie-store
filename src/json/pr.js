@@ -1,10 +1,9 @@
 const pages = {
-    "precios"	:{"titulo":"precios -",		"keys":"Lista de productos y sus precios"},
-    "productos"	:{"titulo":"productos -",	"keys":"Fotos de nuestros productos, para que se te haga agua la boca"},
-    "recetas"	:{"titulo":"recetas -",		"keys":"Algunas recetas para tus milanesas"},
-    "contacto"	:{"titulo":"contacto - ",	"keys":"Contactanos para hacer tu pedido, te lo llevamos o podes pasarlo a buscar"},
-	"home"		:{"titulo":"",				"keys":"Las milanesas y hamburguesas mas ricas de Pilar, congeladas y listas para el horno"},
-	"pedidos"	:{"titulo":"Pedidos -",		"keys":"Las milanesas y hamburguesas mas ricas de Pilar, congeladas y listas para el horno"}
+    "precios"	:{"titulo":"precios -",		"keys":"Our Prices"},
+    "productos"	:{"titulo":"productos -",	"keys":"Our Fine Products"},
+    "contacto"	:{"titulo":"contacto - ",	"keys":"Tempus Foods - exceptional charcuterie - CONTACT US"},
+	"home"		:{"titulo":"",				"keys":"Tempus Charcuterie - Award Winning British Charcuterie"},
+	
 }
 
 
