@@ -4,22 +4,17 @@ import React from 'react'
 export default function Home(){
 
 const imagenes_carrousel = [
-                        {src:"images/productos/berenjenas.png"           ,alt:"Berenjenas"},
-                        {src:"images/productos/brocoli.png"              ,alt:"Brocoli"},
-                        {src:"images/productos/garbanzos.png"            ,alt:"Garbanzos"},
-                        {src:"images/productos/ham_carne_cocida.png"     ,alt:"Ham Carne"},
-                        {src:"images/productos/ham_carne_cruda.png"      ,alt:"Ham Carne"},
-                        {src:"images/productos/ham_cerdo_cruda.png"      ,alt:"Ham Cerdo"},
-                        {src:"images/productos/ham_remolacha_cruda.png"  ,alt:"Ham Remolacha"},
-                        {src:"images/productos/mila_berenjena_cruda.png" ,alt:"Mila Berenjena"},
-                        {src:"images/productos/mila_calabaza_cocida.png" ,alt:"Mila Calabaza"},
-                        {src:"images/productos/mila_peceto_cruda.png"    ,alt:"Mila Peceto"},
-                        {src:"images/productos/mila_pollo_cruda.png"     ,alt:"Mila Pollo"},
-                        {src:"images/productos/nalga.png"                ,alt:"Nalga"},
-                        {src:"images/productos/peceto.png"               ,alt:"Peceto"},
-                        {src:"images/productos/remolacha.png"            ,alt:"Remolacha"},
-                        {src:"images/productos/zapallo.png"              ,alt:"Zapallo"},
-                        {src:"images/productos/zucchini.png"             ,alt:"Zucchini"}
+                        {src:"images/productos/bondiola.jpg"            ,alt:"Bondiola"},
+                        {src:"images/productos/jamon-crudo.jpg"         ,alt:"Crudo"},
+                        {src:"images/productos/lomito-ahumado.jpg"      ,alt:"Lomito"},
+                        {src:"images/productos/tabla1.png"              ,alt:"Tabla1"},
+                        {src:"images/productos/tabla3.png"              ,alt:"Tabla3"},
+                        {src:"images/productos/tabla-fiambres.png"      ,alt:"Tabla2"},
+                        {src:"images/productos/royalty-jamon.jpg"       ,alt:"Jamon"},
+                        {src:"images/productos/salame-trufa.jpg"        ,alt:"Trufa"},
+                        {src:"images/productos/salame.jpg"              ,alt:"Salame"},
+                        {src:"images/productos/smoked-jowl.png"         ,alt:"Jowl"},
+                      
                     ]
 
 
@@ -27,15 +22,15 @@ return(
 <>
 <div className="row justify-content-center py-3">    
     <div className="col-12 pb-4">
-        <h1>No es solo hacer comida.</h1> 
+        <h1>Award Winning British Charcuterie</h1> 
     </div>
     
     <div className="col-10 col-md-9 col-lg-8">
-        <p>En este momento tan especial de aislamiento social obligatorio, solo se necesitan unos minutos de paseo en las distintas redes sociales -nuestro &uacute;nico encuentro posible con otros adem&aacute;s de la aventura de ir al s&uacute;per- para darnos cuenta de un fen&oacute;meno clar&iacute;simo: cocinar se convirti&oacute; en una de las actividades estrella de la cuarentena.</p>    
+        <p>Tempus was a range that we had to have on our shelves at Fortnum's. I cannot recommend them enough.</p>    
         
-        <p>Tiene todas las de ganar: es una actividad placentera que muchas veces no podemos hacer por falta de tiempo pero que ahora es un oasis para la cabeza de cada cocinero -aficionado, profesional o novato- en el medio de la incertidumbre y la ansiedad que trajo la pandemia del coronavirus.</p>
+        <p>Tom and Dhruv deliver a range of charcuterie which, in my opinion, can rival the continental classic and makes this brand one to watch for 2019 and beyond.</p>
 
-        <p>“De esta cuarentena salimos todos cocineros”. “Ya hice masa madre, me falta hacer gimnasia por Instagram y ya me recibo de cuarentena”. Los chistes en Twitter, las im&aacute;genes de pan y otras recetas caseras reci&eacute;n hechas en los perfiles de amigos y familiares en Instagram y Facebook, ¡a nosotros se nos dio por hacer milanesas!.</p>
+        <p>All you need is a platter of Tempus, a decent bread, and a bottle of wine for a very happy evening.</p>
     </div>
 </div>
 
@@ -63,7 +58,7 @@ return(
             </a>
 
         </div>
-        <p className="pt-4">Nuestro objetivo es simple, compartir el amor que le ponemos a la comida, para que todos puedan comer rico y sano =)</p>
+        <p className="pt-4">Our philosophy is a simple one.</p>
     </div> 
 </div> 
 
