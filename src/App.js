@@ -1,25 +1,16 @@
 import './App.css';
 import {BrowserRouter as Router, Switch, Route, useHistory } from 'react-router-dom'
 import {Carrito} from './context/cartContext'
-
 import Cabecera from './components/header/Header'
 import {enlacesNav} from './components/values/values'
-
 import Home from './components/pages/home'
-
 import ItemListContainer from './components/itemlistcontainer/ItemListContainer.js'
 import ItemDetailContainer from './components/itemlistcontainer/ItemDetailContainer'
 import ItemDetail from './components/itemlistcontainer/ItemDetail.js'
-
 import CartIconContainer from './components/cart/cartIconContainer'
-
-
 import {ListaProductos} from './components/values/values'
-
 import {TablaPrecios} from './components/pricelist/pricelist'
-
 import Footer from './components/footer/footer'
-
 export default function App() {
 
 return (
