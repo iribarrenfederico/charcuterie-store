@@ -2,7 +2,7 @@ const pages = {
     "precios"	:{"titulo":"precios -",		"keys":"Our Prices"},
     "productos"	:{"titulo":"productos -",	"keys":"Our Fine Products"},
     "contacto"	:{"titulo":"contacto - ",	"keys":"Tempus Foods - exceptional charcuterie - CONTACT US"},
-	"home"		:{"titulo":"",				"keys":"Tempus Charcuterie - Award Winning British Charcuterie"},
+	  "home"		:{"titulo":"",				"keys":"Tempus Charcuterie - Award Winning British Charcuterie"},
 	
 }
 
