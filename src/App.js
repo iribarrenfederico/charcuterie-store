@@ -1,8 +1,8 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-import "./App.css";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import "./Css/ItemListContainer.css";
 import { NavBar } from "./components/NavBar";
-import Cart from "./components/Cart";
+import Cart from "./components/cart/Cart";
 import Home from "./components/Home";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 
