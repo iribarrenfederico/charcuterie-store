@@ -29,7 +29,7 @@ return (
     <div className="App">
 
       <Cabecera
-                titulo = 'La cocina de la Pipi' 
+                titulo = 'La charcuterie' 
                 logo = {process.env.PUBLIC_URL + '/images/logo-transparente.png'}
                 enlaces={enlacesNav}
       />
@@ -81,11 +81,11 @@ return (
       </main>
 
       <Footer
-        titulo = 'La cocina de la Pipi'
+        titulo = 'La charcuterie'
         logo = {process.env.PUBLIC_URL + '/images/logo-transparente.png'}
         enlaces={enlacesNav}
-        telefono="11 15 41234-1234"
-        correo="pedidos@correo.com"
+        telefono="012345543210"
+        correo="lacharcuterie@aol.com"
       />
 
     </div>

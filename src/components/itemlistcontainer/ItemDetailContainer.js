@@ -1,41 +1,42 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
+import {useParams} from 'react-router-dom'
 
-const ItemDetailContainer = () => {
-  const [item, setItem] = useState([]);
-  const { title } = useParams();
+import ItemDetail from './ItemDetail'
+import {Loading} from '../../helpers/helpers'
+import {InputSpiner} from './ItemList'
+import {getFirestore} from '../../firebase'
 
-  useEffect(() => {
-    db();
-  }, [title]);
+import './style.css'
 
-  async function db() {
-    try {
-      const call = await fetch(
-        "https://api.mercadolibre.com/sites/MLA/search?q=launchpad"
-      );
-      const result = await call.json();
-      console.log(result.results[0]);
-      setItem(result.results.find(i => i.title === title));
-    } catch (err) {
-      console.log("Paso algo feo", err);
-    }
-  }
+export default function ItemDetailContainer({listado}) {
+ 
+    const [ListadoProductos, SetListadoProductos] = useState([])
+    const {id} = useParams()
 
-  return (
-    <>
-      <h2>Detalle</h2>
-      {item.length === 0 ? (
-        <p>Loading..</p>
-      ) : (
-        <div>
-          <h3>{item.title}</h3>
-          <p>${item.price}</p>
-          <img src={item.thumbnail} alt="foto" style={{ width: 200 }} />
-        </div>
-      )}
-    </>
-  );
-};
+    useEffect(() => {
 
-export default ItemDetailContainer;
+
+
+
+      const datos = new Promise((resolve,reject) => {
+        setTimeout(()=>{
+          resolve(listado())
+        },500) /*aca deberia ir 2000 pero no queria seguir esperando 2 segundos cada vez que entro en la pagina*/
+      })
+
+      datos.then((res)=>{
+        SetListadoProductos( res.filter(i => i.codigo === id) )
+      })
+
+    },[id]);
+
+return(
+  ListadoProductos.length > 0 ? 
+    <ItemDetail 
+        {...ListadoProductos[0]}
+        botonera = <InputSpiner {...ListadoProductos[0]} />
+    />
+      :
+    <Loading size="8" space="5"/>
+ )  
+}
