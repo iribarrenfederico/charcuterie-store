@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Counter from "./Counter";
+import Counter from "../Counter";
 import { useParams } from "react-router-dom";
 
 const Home = () => {
