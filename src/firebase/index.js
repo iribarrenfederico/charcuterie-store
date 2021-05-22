@@ -33,18 +33,34 @@ export const setFireCollection = (collecion, listado) => {
     })
   })
 }
+export const getFireCollection = (opt) => {
+  /*opt = { 
+           callback: callback Function,
+           collection:"name of collection",
+           where:{where:"familia",condition:"==",value:"milanesas"}
+           sort:{key:"orden",order:"asc"}
+         }*/
+   let fireGet = db.collection(opt.collection);
+   let query =  opt.where ? fireGet.where( opt.where.where , opt.where.condition , opt.where.value) : fireGet
+   let order =  opt.sort  ? query.orderBy( opt.sort.key    , opt.sort.order )                       : query
+   order.get().then( querySnapshot  => {
+       opt.callback( querySnapshot.docs.map( i => i.data() ) )
+   })
+   .catch( error => {console.error("Error geting documents: ", error) })
+ };
+ 
+ export const setFireCollection = (collectionName, array,id) => {
+  let fire = db.collection(collectionName)
+  array.forEach(item => 
+    { item[id]? 
+        fire.doc(item[id]).set(item)  
+          :  
+        fire.add(item)
+      .then ( docRef => {console.log   ("Document written with ID: ", docRef.id) })
+      .catch( error  => {console.error ("Error adding document: "   , error    ) })
+    }
+  )
+}
 
-
-
-export const gettFireCollection = (callback, collecion) => {
-    db.collection(collecion).get().then(callback)
-};
-
-
-db.collection("items").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        console.log("nada", doc.data());
-    });
-});
 
 export default db
