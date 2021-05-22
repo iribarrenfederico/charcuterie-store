@@ -1,42 +1,39 @@
 import React, { useState, useEffect } from 'react'
-import {useParams} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import ItemDetail from './ItemDetail'
-import {Loading} from '../../helpers/helpers'
-import {InputSpiner} from './ItemList'
-import {getFirestore} from '../../firebase'
+import { Loading } from '../../helpers/helpers'
+import { InputSpiner } from './ItemList'
+import { getFirestore } from '../../firebase'
 
 import './style.css'
 
-export default function ItemDetailContainer({listado}) {
- 
-    const [ListadoProductos, SetListadoProductos] = useState([])
-    const {id} = useParams()
+export default function ItemDetailContainer({ listado }) {
 
-    useEffect(() => {
+  const [ListadoProductos, SetListadoProductos] = useState([])
+  const { id } = useParams()
 
-
+  useEffect(() => {
 
 
-      const datos = new Promise((resolve,reject) => {
-        setTimeout(()=>{
-          resolve(listado())
-        },2000) 
-      })
 
-      datos.then((res)=>{
-        SetListadoProductos( res.filter(i => i.codigo === id) )
-      })
 
-    },[id]);
+    const datos = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(listado())
+      }, 2000)
+    })
 
-return(
-  ListadoProductos.length > 0 ? 
-    <ItemDetail
-        {...ListadoProductos[0]}
-        botonera = <InputSpiner {...ListadoProductos[0]} />
-    />
-      
-    <Loading size="8" space="5"/>
- )  
+    datos.then((res) => {
+      SetListadoProductos(res.filter(i => i.codigo === id))
+    })
+
+  }, [id]);
+
+  return (<>
+    {ListadoProductos.length > 0 ? <ItemDetail {...ListadoProductos[0]} botonera={<InputSpiner {...ListadoProductos[0]} />}
+         :
+      <Loading size="8" space="5" />}
+    </>
+  )
 }

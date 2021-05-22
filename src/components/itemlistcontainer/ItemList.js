@@ -7,23 +7,12 @@ import { useCartContext } from '../../context/cartContext'
 export default function Productos({ listaProductos }) {
   return (
     <div className="row" id="lista_productos">
-      {listaProductos.map(
-        (item, index) =>
-          <ProductCard({ nombre, texto, img, stock, botonera, detalle }: {
-        key: {index};
-            nombre: {May(item.nombre)} ;
-            texto: {item.texto};
-            img: {item.img};
-            stock: {item.stock};
-            botonera: <InputSpiner {...item} />;
-            detalle: {<Link to={"../productos/" + item.familia + "/" + item.codigo}>Ver detalle</Link>};
-          }):
-
-          />
-        )
-      }
-    </div>
-  )
+      {listaProductos.map(item => {
+        return <ProductCard key={item.id} nombre={May(item.nombre)} texto={item.texto} img={item.img} stock={item.stock} item=
+        {item} />
+      })}
+      </div>
+  ) 
 }
 
 
@@ -133,7 +122,8 @@ export function ProductCard({ nombre, texto, img, stock, botonera, detalle }) {
           <h5 className="card-title">{nombre}</h5>
           <p className="card-text"></p>
           <p className="card-text">{texto}</p>
-          {botonera} {detalle}
+          <InputSPiner {...item} />
+          <Link to={"../productos/" + item.familia + "/" + item.codigo}>Ver Detalle</Link>
           <p className="card-text"></p>
         </div>
       </div>
