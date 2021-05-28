@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail'
 import { Loading } from '../../helpers/helpers'
 import { InputSpiner } from './ItemList'
-import { getFirestore } from '../../firebase'
+import db, { getFirestore } from '../../firebase'
 
 import './style.css'
 
@@ -14,21 +14,12 @@ export default function ItemDetailContainer({ listado }) {
   const { id } = useParams()
 
   useEffect(() => {
-
-
-
-
-    const datos = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(listado())
-      }, 2000)
-    })
-
-    datos.then((res) => {
-      SetListadoProductos(res.filter(i => i.codigo === id))
-    })
-
-  }, [id]);
+    db.collection("items").doc(id).get().then( (querySnapshot) => {
+      let salida = []
+      salida.push({...querySnapshot.data(), id: querySnapshot.id})
+      SetListadoProductos(salida)
+    }
+    )}, [id]);
 
   return (<>
     {ListadoProductos.length > 0 ? <ItemDetail {...ListadoProductos[0]} botonera=
