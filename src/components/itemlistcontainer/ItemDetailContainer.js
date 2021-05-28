@@ -31,9 +31,8 @@ export default function ItemDetailContainer({ listado }) {
   }, [id]);
 
   return (<>
-    {ListadoProductos.length > 0 ? <ItemDetail {...ListadoProductos[0]} botonera={<InputSpiner {...ListadoProductos[0]} />}
-         :
-      <Loading size="8" space="5" />}
+    {ListadoProductos.length > 0 ? <ItemDetail {...ListadoProductos[0]} botonera=
+    {<InputSpiner {...ListadoProductos[0]} />}/> : <Loading size="8" space="5" />}
     </>
   )
 }
