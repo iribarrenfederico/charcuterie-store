@@ -122,7 +122,7 @@ export function ProductCard({ nombre, texto, img, stock, botonera, detalle }) {
           <h5 className="card-title">{nombre}</h5>
           <p className="card-text"></p>
           <p className="card-text">{texto}</p>
-          <InputSPiner {...item} />
+          <InputSpiner {...item} />
           <Link to={"../productos/" + item.familia + "/" + item.codigo}>Ver Detalle</Link>
           <p className="card-text"></p>
         </div>

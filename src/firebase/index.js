@@ -14,9 +14,10 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+//firebase.analytics();
 
 
+export const db = firebase.firestore();
 
 export const setFireCollection = (collecion, listado) => {
   listado.map(prod => {
@@ -49,7 +50,7 @@ export const getFireCollection = (opt) => {
    .catch( error => {console.error("Error geting documents: ", error) })
  };
  
- export const setFireCollection = (collectionName, array,id) => {
+ /*export const setFireCollection = (collectionName, array,id) => {
   let fire = db.collection(collectionName)
   array.forEach(item => 
     { item[id]? 
@@ -61,6 +62,6 @@ export const getFireCollection = (opt) => {
     }
   )
 }
-
+*/
 
 export default db
