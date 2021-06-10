@@ -8,6 +8,7 @@ import ItemListContainer from './components/itemlistcontainer/ItemListContainer.
 import ItemDetailContainer from './components/itemlistcontainer/ItemDetailContainer'
 import ItemDetail from './components/itemlistcontainer/ItemDetail.js'
 import CartIconContainer from './components/cart/cartIconContainer'
+import CartListContainer from './components/cart/cartListContainer'
 import {ListaProductos} from './components/values/values'
 import {TablaPrecios} from './components/pricelist/pricelist'
 import Footer from './components/footer/footer'
@@ -88,7 +89,7 @@ return (
 
 function OnLoadPage() {
   const history = useHistory();
-    history.push('/home');
+    history.push('/productos');
     return(
         <>
         </>

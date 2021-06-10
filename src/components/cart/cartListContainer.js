@@ -4,7 +4,6 @@ import React , {useEffect,useState} from 'react'
 import CartList from './cartList'
 import {Link,useParams} from "react-router-dom";
 import {fire} from '../../firebase'
-import {useUserContext} from '../../context/userContext'
 import {useCartContext} from '../../context/cartContext'
 
 
