@@ -1,11 +1,17 @@
-import React ,{useEffect,useState}from 'react'
-import CartIcon from './cartIcon'
-import {Link} from "react-router-dom";
-import {randomKey} from '../../helpers/helpers'
+
+  
+import React , {useEffect,useState} from 'react'
+import CartList from './cartList'
+import {Link,useParams} from "react-router-dom";
+import {fire} from '../../firebase'
+import {useUserContext} from '../../context/userContext'
 import {useCartContext} from '../../context/cartContext'
 
 
-export default function CartIconContainer(){
+
+
+
+export default function CartListContainer(){
 
 	const [cart, cartTask] = useCartContext()
 	const [loading,setLoading] = useState(false)
@@ -78,12 +84,15 @@ return(
 }
 
 	return(	
-		<CartIcon 
-			cartTask = {cartTask}
-			cart ={cart}
-			DetallePedido = {TablaPedidos}
-			loading = {loading}
-			setLoading = {setLoading}
-		/>
+		<CartList>
+		<>
+			<div className="col-8"> 
+ 				<h2>Orden Actual</h2> 
+			</div> 
+ 			<div className="col-9">
+				<TablaPedidos/>
+ 			</div> 
+		</>
+		</CartList>
 	)
 }
