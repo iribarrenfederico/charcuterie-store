@@ -4,8 +4,7 @@ import { Loading, randomKey } from '../../helpers/helpers'
 
 export default function CartIcon({ nombre, cart, cartTask, DetallePedido, loading, setLoading }) {
     let total = cartTask.getCantidadTotal > 0 ? cartTask.getCantidadTotal : ""
-}
-return (
+return(
     <div id="pedidos">
 
         <div id="botoncompra" style={{ display: total == "" ? "" : "" }} >
@@ -21,4 +20,4 @@ return (
             </button>
 
         </div>
-        </div>)
+        </div>)}
