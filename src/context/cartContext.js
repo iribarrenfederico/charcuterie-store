@@ -19,7 +19,6 @@ export const Carrito = ({children}) => {
 
 	const carroVacio = []
 	const [cart, setCart] = useState(carroVacio)
-	const [user,userTask] = useUserContext()
 
 	const [order, setOrder] = useState(null)
 
@@ -28,17 +27,11 @@ export const Carrito = ({children}) => {
 	useEffect(()=>{
 		order && setCart(carroVacio)
 	},[order])
-
-	useEffect(() => {
-		task.readFromLocal('tempCart',setCart,user)
-	}, [user])
 	
 	useEffect(()=>{
-		task.saveToLocal('tempCart',cart!=carroVacio,user)
-	},[cart,stockItem,user])
+		task.saveToLocal('tempCart',cart!=carroVacio)
+	},[cart,stockItem])
 
-	task.user = user
-	task.userTask = userTask
 	task.cart = cart
 	task.order = order
 	task.setOrder = setOrder
@@ -110,7 +103,7 @@ export const Carrito = ({children}) => {
 		if(user && controlStok){
 			
 			let buyCollection = {
-			buyer:{id:user.uid,email:user.email,name:user.displayName},
+			buyer:{id:user.uid,email:user.email},
 			cart,
 			date: new Date(),
 			total: task.getTotal(),

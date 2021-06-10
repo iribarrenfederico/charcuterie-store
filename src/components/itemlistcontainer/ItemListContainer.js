@@ -5,6 +5,7 @@ import Productos from './ItemList'
 import {useCartContext} from '../../context/cartContext'
 import {Loading} from '../../helpers/helpers'
 import {fire} from '../../firebase'
+import { listaProductos } from '../values/values'
 
 export default function ItemListContainer() {
  
@@ -13,7 +14,7 @@ export default function ItemListContainer() {
     const [lstProductos, SetLstProductos] = useState([])
 
  useEffect(() => {
-    fire.getCollection(SetLstProductos,"items",familia?{where:["familia","==",familia]}:{})
+    fire.getCollection(listaProductos,"items",familia?{where:["familia","==",familia]}:{})
  },[familia,cart]);
 
     return (
@@ -34,7 +35,7 @@ export default function ItemListContainer() {
                     </div>
 
                     {
-                        lstProductos.length > 0 ?
+                        listaProductos.length > 0 ?
                             <Productos listaProductos={lstProductos} />
                             :
                             <Loading size="8" space="5" />

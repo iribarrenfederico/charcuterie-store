@@ -8,20 +8,21 @@ import ItemDetail from './ItemDetail'
 import {InputSpiner} from './ItemList'
 
 import './style.css'
+import { listaProductos } from '../values/values'
 
 export default function ItemDetailContainer() {
  
-    const [ListadoProductos, SetListadoProductos] = useState([])
+    const [listaProductos, SetListadoProductos] = useState([])
     const {id} = useParams()
 
     useEffect(() => {
 
-      db.getCollection(SetListadoProductos,"items",{doc:id})
+      fire.getCollection(listaProductos,"items",{doc:id})
  
      },[id]);
 
   return (<>
-    {ListadoProductos.length > 0 ? <ItemDetail {...ListadoProductos[0]} botonera={<InputSpiner {...ListadoProductos[0]} />} /> :
+    {listaProductos.length > 0 ? <ItemDetail {...listaProductos[0]} botonera={<InputSpiner {...listaProductos[0]} />} /> :
       <Loading size="8" space="5" />}
   </>
   )
