@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import {useParams} from 'react-router-dom'
 
 import {Loading} from '../../helpers/helpers'
-import {db} from '../../firebase'
+import {fire} from '../../firebase'
 
 import ItemDetail from './ItemDetail'
 import {InputSpiner} from './ItemList'

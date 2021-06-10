@@ -4,7 +4,7 @@ import {useParams} from 'react-router-dom'
 import Productos from './ItemList'
 import {useCartContext} from '../../context/cartContext'
 import {Loading} from '../../helpers/helpers'
-import {db} from '../../firebase'
+import {fire} from '../../firebase'
 
 export default function ItemListContainer() {
  
@@ -13,7 +13,7 @@ export default function ItemListContainer() {
     const [lstProductos, SetLstProductos] = useState([])
 
  useEffect(() => {
-    db.getCollection(SetLstProductos,"items",familia?{where:["familia","==",familia]}:{})
+    fire.getCollection(SetLstProductos,"items",familia?{where:["familia","==",familia]}:{})
  },[familia,cart]);
 
     return (
@@ -34,8 +34,8 @@ export default function ItemListContainer() {
                     </div>
 
                     {
-                        ListadoProductos.length > 0 ?
-                            <Productos listaProductos={ListadoProductos} />
+                        lstProductos.length > 0 ?
+                            <Productos listaProductos={lstProductos} />
                             :
                             <Loading size="8" space="5" />
                     }
