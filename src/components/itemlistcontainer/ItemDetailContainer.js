@@ -14,16 +14,16 @@ export default function ItemDetailContainer({ listado }) {
   const { id } = useParams()
 
   useEffect(() => {
-    db.collection("items").doc(id).get().then( (querySnapshot) => {
+    db.collection("items").doc(id).get().then((querySnapshot) => {
       let salida = []
-      salida.push({...querySnapshot.data(), id: querySnapshot.id})
+      salida.push({ ...querySnapshot.data(), id: querySnapshot.id })
       SetListadoProductos(salida)
     }
-    )}, [id]);
-
+    )
+  }, [id])
   return (<>
-    {ListadoProductos.length > 0 ? <ItemDetail {...ListadoProductos[0]} botonera=
-    {<InputSpiner {...ListadoProductos[0]} />}/> : <Loading size="8" space="5" />}
-    </>
+    {ListadoProductos.length > 0 ? <ItemDetail {...ListadoProductos[0]} botonera={<InputSpiner {...ListadoProductos[0]} />} /> :
+      <Loading size="8" space="5" />}
+  </>
   )
 }

@@ -17,7 +17,7 @@ export default function ItemListContainer({listado}) {
          db.collection("items").get().then( (querySnapshot) => {
             let salida = []
             querySnapshot.forEach((doc) => {
-              salida.push({...doc.data()})
+              salida.push({...doc.data(), id: doc.id})
           })
               SetListadoProductos(salida)
           }
@@ -31,7 +31,7 @@ export default function ItemListContainer({listado}) {
          .then( (querySnapshot) => {
             let salida = []
             querySnapshot.forEach((doc) => {
-              salida.push({...doc.data()})
+              salida.push({...doc.data(), id: doc.id})
           })
               SetListadoProductos(salida)
           }
