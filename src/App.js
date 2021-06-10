@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Switch, Route, useHistory } from 'react-router-
 import {Carrito} from './context/cartContext'
 import Cabecera from './components/header/Header'
 import {enlacesNav} from './components/values/values'
-import Home from './components/pages/home'
+import Home from './components/pages/home.js'
 import ItemListContainer from './components/itemlistcontainer/ItemListContainer.js'
 import ItemDetailContainer from './components/itemlistcontainer/ItemDetailContainer'
 import ItemDetail from './components/itemlistcontainer/ItemDetail.js'
