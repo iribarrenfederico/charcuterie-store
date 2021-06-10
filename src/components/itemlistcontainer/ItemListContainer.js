@@ -11,7 +11,7 @@ export default function ItemListContainer() {
  
     const {familia} = useParams()
     const [cart, cartTask] = useCartContext()
-    const [lstProductos, SetLstProductos] = useState([])
+    const [listaProductos, SetLstProductos] = useState([])
 
  useEffect(() => {
     fire.getCollection(listaProductos,"items",familia?{where:["familia","==",familia]}:{})
