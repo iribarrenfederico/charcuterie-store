@@ -14,7 +14,7 @@ export const useCartContext = () => useContext(CartContext)
 
 
 export const Carrito = ({children}) => {
-//Incio objeto caja de herramientas del carrito.
+//Inicio objeto caja de herramientas del carrito.
 	const task = {}
 
 	const carroVacio = []
