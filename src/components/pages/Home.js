@@ -26,11 +26,11 @@ return(
     </div>
     
     <div className="col-10 col-md-9 col-lg-8">
-        <p>Tempus was a range that we had to have on our shelves at Fortnum's. I cannot recommend them enough.</p>    
+        <p>"Tempus was a range that we had to have on our shelves at Fortnum's. I cannot recommend them enough."</p>    
         
-        <p>Tom and Dhruv deliver a range of charcuterie which, in my opinion, can rival the continental classic and makes this brand one to watch for 2019 and beyond.</p>
+        <p>"Tom and Dhruv deliver a range of charcuterie which, in my opinion, can rival the continental classic and makes this brand one to watch for 2019 and beyond."</p>
 
-        <p>All you need is a platter of Tempus, a decent bread, and a bottle of wine for a very happy evening.</p>
+        <p>"All you need is a platter of Tempus, a decent bread, and a bottle of wine for a very happy evening."</p>
     </div>
 </div>
 
