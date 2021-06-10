@@ -1,5 +1,4 @@
 import React, {useState,useEffect} from 'react'
-import Modal from '../modal/modal'
 import {Link} from "react-router-dom";
 import {Loading,randomKey} from '../../helpers/helpers'
 
