@@ -1,26 +1,25 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import {useParams} from 'react-router-dom'
+
+import {Loading} from '../../helpers/helpers'
+import {fire} from '../../firebase'
 
 import ItemDetail from './ItemDetail'
-import { Loading } from '../../helpers/helpers'
-import { InputSpiner } from './ItemList'
-import db, { getFirestore } from '../../firebase'
+import {InputSpiner} from './ItemList'
 
 import './style.css'
 
-export default function ItemDetailContainer({ listado }) {
+export default function ItemDetailContainer() {
+ 
+    const [ListadoProductos, SetListadoProductos] = useState([])
+    const {id} = useParams()
 
-  const [ListadoProductos, SetListadoProductos] = useState([])
-  const { id } = useParams()
+    useEffect(() => {
 
-  useEffect(() => {
-    db.collection("items").doc(id).get().then((querySnapshot) => {
-      let salida = []
-      salida.push({ ...querySnapshot.data(), id: querySnapshot.id })
-      SetListadoProductos(salida)
-    }
-    )
-  }, [id])
+      fire.getCollection(SetListadoProductos,"items",{doc:id})
+ 
+     },[id]);
+
   return (<>
     {ListadoProductos.length > 0 ? <ItemDetail {...ListadoProductos[0]} botonera={<InputSpiner {...ListadoProductos[0]} />} /> :
       <Loading size="8" space="5" />}
