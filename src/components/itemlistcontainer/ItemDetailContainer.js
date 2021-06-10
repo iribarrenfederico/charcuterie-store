@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import {useParams} from 'react-router-dom'
 
 import {Loading} from '../../helpers/helpers'
-import {fire} from '../../firebase'
+import {db} from '../../firebase'
 
 import ItemDetail from './ItemDetail'
 import {InputSpiner} from './ItemList'
@@ -16,7 +16,7 @@ export default function ItemDetailContainer() {
 
     useEffect(() => {
 
-      fire.getCollection(SetListadoProductos,"items",{doc:id})
+      db.getCollection(SetListadoProductos,"items",{doc:id})
  
      },[id]);
 
