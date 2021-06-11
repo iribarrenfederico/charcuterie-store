@@ -8,7 +8,7 @@ import ItemDetail from './ItemDetail'
 import {InputSpiner} from './ItemList'
 
 import './style.css'
-import { listaProductos } from '../values/values'
+import { ListaProductos } from '../values/values'
 
 export default function ItemDetailContainer() {
  

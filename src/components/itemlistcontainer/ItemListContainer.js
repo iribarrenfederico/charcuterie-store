@@ -5,7 +5,7 @@ import Productos from './ItemList'
 import {useCartContext} from '../../context/cartContext'
 import {Loading} from '../../helpers/helpers'
 import {fire} from '../../firebase'
-import { listaProductos } from '../values/values'
+import { ListaProductos } from '../values/values'
 
 export default function ItemListContainer() {
  
