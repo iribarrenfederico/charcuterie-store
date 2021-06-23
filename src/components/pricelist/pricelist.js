@@ -16,6 +16,7 @@ export function TablaPrecios({listado}) {
 
     },[listado]);
 
+    
    return(
         <div>
             { ListadoProductos.length > 0 ? 

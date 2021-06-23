@@ -7,6 +7,7 @@ export const enlacesNav = [
 
 export const listaProductos = ListaProductos();
 
+
 export function ListaProductos() {
   return ([{
     "codigo": "M001",

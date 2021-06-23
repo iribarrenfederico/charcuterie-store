@@ -10,6 +10,7 @@ import {InputSpiner} from './ItemList'
 import './style.css'
 import { ListaProductos } from '../values/values'
 
+
 export default function ItemDetailContainer() {
  
     const [listaProductos, SetListadoProductos] = useState([])
