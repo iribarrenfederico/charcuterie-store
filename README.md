@@ -8,5 +8,7 @@ Este proyecto se trata de un e-commerce con gestión de usuarios, control de sto
 Se puede clonar el repositorio utilizando el comando "git clone https://github.com/iribarrenfederico/charcuterie-store", descargando las dependencias con "npm install" y utlizando "npm start" para abrir el live server.
 
 
-Animación
+##Animación
+
+
 ![](tempus.gif)
